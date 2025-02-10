@@ -1,0 +1,12 @@
+2.1) Pour générer une clé protéger avec l'algorithem DES3, il faut préciser l'algorithme que l'on veut et après le mot de passe 
+que l'on veut mettre :
+
+openssl genrsa -des3 -out server2.key
+PEM Pass : jesaispas
+
+Ici on crée une clé nommée server2.key protégée par l'algorithme des3 avec une taille par défaut (2048)
+
+2.2)
+
+Pour extraire la clé if faut refaire la meme commande que dans l'exercice 1 mais la différence maintenant c'est qu'un mot de passe est demandé 
+openssl rsa -in server2.key -pubout -out server2.pub
