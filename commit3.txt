@@ -1,0 +1,15 @@
+3.1) Ces commandes permettent de mesurer l'empreinte numérique d'un fichier mais je ne sais pas quelle valeur est renvoyé : 
+
+openssl dgst -sha256 commit3.txt ---> résultat : SHA2-256(commit3.txt)= 4a2f9bf0183e1781a53afaa5f026d8740cd5b54248483ff87a0ea2f2f68949bc
+
+openssl dgst -md5 commit3.txt ---> résultat : MD5(commit3.txt)= 0e378f8281a6f98af85ba001aaa61a21
+
+openssl dgst -sha1 commit3.txt ---> résultat : SHA1(commit3.txt)= 119443f2bae02f94cc1bdbda2449cc282c81af73
+
+3.2) 
+Cette commande permet de signer 
+openssl dgst -sha256 -sign server.key -out commit3.sign commit3.txt
+
+openssl dgst -sha256 -verify server.pub -signature commit3.sign commit3.txt
+
+ 
