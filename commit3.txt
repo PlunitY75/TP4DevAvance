@@ -10,6 +10,7 @@ openssl dgst -sha1 commit3.txt ---> résultat : SHA1(commit3.txt)= 119443f2bae02
 Cette commande permet de signer 
 openssl dgst -sha256 -sign server.key -out commit3.sign commit3.txt
 
+Et celle là permet de vérifier
 openssl dgst -sha256 -verify server.pub -signature commit3.sign commit3.txt
 
  
