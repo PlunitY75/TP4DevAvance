@@ -1,0 +1,6 @@
+Créer une clé rsa : openssl genrsa -out server.key 
+Avec cette commande, on crée une clé nommée server.key avec une taille par défaut de 2048
+
+Pour créer une clé de 4096 bits il faut préciser à la toute fin de la commande : openssl genrsa -out server.key 4096
+
+Pour extraire la clé publique de server.key et l’enregistrer dans server.pub : openssl rsa -in server.key -pubout -out server.pub
